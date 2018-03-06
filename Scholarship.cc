@@ -1,17 +1,21 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-const int N = 100;
-pair<int, int> a[N];
+const int N = 100005;
+typedef long long LL;
+//using LL = long long;
+pair<long long, long long> a[N];
 
-bool cmp(const pair<int, int>& x, const pair<int, int>& y) {
+bool cmp(const pair<LL, LL>& x, const pair<LL, LL>& y) {
     return x.second < y.second;
 }
 
 int main(){
     int n = 0;
-    long long r = 0, avg = 0, sum = 0, target = 0;
-    cin >> n >> r >> avg;
+    long long r = 0, avg = 0;
+    while(cin >> n >> r >> avg) {
+    LL sum = 0, target = 0;
     target = avg * n;
     for(int i = 0; i < n; i++){
         cin >> a[i].first >> a[i].second;
@@ -30,5 +34,6 @@ int main(){
         }
     }
     cout << sum << endl;
+    }
     return 0;
 }
