@@ -5,6 +5,7 @@ using namespace std;
 const int N = 100005;
 typedef long long LL;
 //using LL = long long;
+
 pair<long long, long long> a[N];
 
 bool cmp(const pair<LL, LL> &x, const pair<LL, LL> &y)
